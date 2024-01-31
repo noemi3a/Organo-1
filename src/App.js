@@ -1,4 +1,5 @@
-import Banner from './Componentes/Banner/Banner';
+import Banner from './Componentes/Banner/Banner'
+import CampoTexto from './Componentes/CampoTexto';
 
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
     
     <div className="App">
       <Banner />
-     
+      <CampoTexto />
+      
     </div>
   );
 }
