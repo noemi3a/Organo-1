@@ -1,20 +1,15 @@
 import './ListaSuspensa.css'
-
-const ListaSuspensa = (props) => {
-    console.log(props.itens)
+const ListaSuspensa = ({ itens }) => {
     return (
-        <div className='lista-suspensa'>
-            <label>Time{props.label}</label>
-            <select>
-    <option value="" disabled selected>{props.placeholder}</option>          
-    {props.itens.map(item => {
-        return <option key={item} value={item}></option>
-    })}
-</select>
+      <div className='lista-suspensa'>
+        <label>Escolha seu time:</label>
+        <select>
+          {itens.map((item, index) => (
+            <option key={index}>{item}</option>
+          ))}
+        </select>
+      </div>
+    );
+  };
   
-        </div>
-    )
-    
-}
-
-export default ListaSuspensa
+  export default ListaSuspensa;
